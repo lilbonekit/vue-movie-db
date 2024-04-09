@@ -1,0 +1,353 @@
+/* stylelint-disable declaration-no-important */
+/* stylelint-disable unit-disallowed-list */
+html {
+  font-family: var(--app-font-family);
+  overflow: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  scroll-padding-top: toRem(90);
+}
+
+/* stylelint-disable-next-line */
+body, #app {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 100vh;
+  background-color: var(--background-primary-main);
+  color: var(--text-primary-main);
+}
+
+input,
+select,
+textarea {
+  background: var(--background-primary-light);
+  color: var(--text-primary-main);
+  font-family: var(--app-font-family);
+  font-size: toRem(14);
+  font-weight: 400;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+body,
+span,
+p,
+a {
+  font-size: toRem(14);
+}
+
+button {
+  border: none;
+  width: auto;
+  overflow: visible;
+  cursor: pointer;
+  user-select: none;
+  background: transparent;
+  font-family: var(--app-font-family);
+  font-size: toRem(14);
+  color: var(--text-primary-main);
+  line-height: 1.42;
+  font-weight: 600;
+  outline: 0;
+  margin: 0;
+  padding: 0;
+
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+
+  /* Corrects inability to style clickable `input` types in iOS */
+  -webkit-appearance: none;
+
+  /* Remove excess padding and border in Firefox 4+ */
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+}
+
+body,
+p,
+li,
+ul {
+  list-style-type: none;
+  color: var(--text-primary-main);
+}
+
+p {
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: var(--text-primary-main);
+  font-family: var(--app-font-family);
+  font-weight: 700;
+}
+
+h1 {
+  font-size: toRem(48);
+  line-height: 1.35;
+}
+
+h2 {
+  font-size: toRem(32);
+  line-height: 1.16;
+}
+
+h3 {
+  font-size: toRem(24);
+  line-height: 1.4;
+}
+
+h4 {
+  font-size: toRem(22);
+  line-height: toRem(40);
+}
+
+h5 {
+  font-size: toRem(20);
+  line-height: toRem(36);
+}
+
+h6 {
+  font-size: toRem(18);
+  line-height: toRem(32);
+}
+
+a {
+  font-size: toRem(14);
+  line-height: 1.25;
+  font-weight: 400;
+  color: var(--text-primary-main);
+  outline: none;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.landing__inner { 
+  margin: 0 auto;
+  margin-top: toRem(100);
+  width: 100%;
+
+  @include landing-content;
+  @include landing-content-padding;
+}
+
+.landing__h1 {
+  text-align: center;
+  font-weight: 700;
+  font-size: toRem(52);
+  line-height: 1.15;
+
+  @include respond-to(medium) {
+    font-size: toRem(44);
+  }
+
+  @include respond-to(small) {
+    font-size: toRem(36);
+  }
+}
+
+.landing__h2 {
+  font-size: toRem(48);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--text-primary-main);
+
+  @include respond-to(medium) {
+    font-size: toRem(40);
+  }
+
+  @include respond-to(small) {
+    font-size: toRem(32);
+  }
+}
+
+.landing__h3 {
+  font-size: toRem(40);
+  font-weight: 500;
+  line-height: 1.2;
+
+  @include respond-to(medium) {
+    font-size: toRem(32);
+  }
+
+  @include respond-to(small) {
+    font-size: toRem(24);
+  }
+}
+
+.landing__h4 {
+  font-size: toRem(24);
+  color: var(--text-primary-main);
+  font-weight: 600;
+  line-height: 1.33;
+
+  @include respond-to(small) {
+    font-size: toRem(22);
+  }
+}
+
+.landing__caption {
+  font-weight: 500;
+  line-height: 1.4;
+  font-size: toRem(18);
+  color: var(--text-accent-dark);
+  text-transform: uppercase;
+
+  @include respond-to(tablet) {
+    font-size: toRem(16);
+  }
+}
+
+.landing__secondary {
+  font-weight: 400;
+  font-size: toRem(16);
+  line-height: 1.5;
+  color: var(--text-secondary-main);
+}
+
+.app__list {
+  display: flex;
+  flex-direction: column;
+  gap: toRem(16);
+  width: 100%;
+}
+
+.app__list-row {
+  display: flex;
+  justify-content: space-between;
+  border-radius: toRem(8);
+  background-color: var(--background-secondary-light);
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+  padding: toRem(12) toRem(16);
+  gap: toRem(8);
+}
+
+.app__list-cell {
+  display: flex;
+  flex-direction: column;
+  gap: toRem(4);
+  text-align: start;
+
+  @include text-ellipsis;
+
+  &--center {
+    text-align: center;
+    justify-content: center;
+  }
+
+  &--right {
+    text-align: end;
+  }
+}
+
+.app__list-cell-title {
+  font-size: toRem(14);
+  line-height: 1.4;
+  color: var(--text-primary-main);
+  font-weight: 300;
+
+  @include text-ellipsis;
+}
+
+.app__list-cell-value {
+  font-size: toRem(16);
+  line-height: 1.5;
+  font-weight: 600;
+  color: var(--text-primary-main);
+
+  @include text-ellipsis;
+}
+
+.app__kyc-update-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: toRem(16);
+  align-items: end;
+
+  @include respond-to(tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respond-to(small) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.app__markdown {
+  strong {
+    font-weight: 600;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  h3 {
+    font-size: toRem(32);
+    font-weight: 600;
+    padding-bottom: toRem(30);
+  }
+  
+  p {
+    padding-bottom: toRem(16);
+    font-size: toRem(16);
+    color: var(--text-secondary-main);
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  a {
+    font-size: toRem(16);
+  }
+
+  ul {
+    margin-bottom: toRem(20);
+
+    li {
+      display: flex;
+      align-items: center;
+      padding: toRem(6) 0;
+      text-decoration: none;
+      width: fit-content;
+      gap: toRem(4);
+      font-size: toRem(16);
+      color: var(--text-secondary-main);
+      line-height: 1.5;
+      font-weight: 400;
+
+      &:before {
+        content: '\2022';
+        margin: toRem(4);
+      }
+
+      p {
+        padding-bottom: 0;
+      }
+    }
+  }
+}

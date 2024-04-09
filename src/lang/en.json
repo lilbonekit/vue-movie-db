@@ -1,0 +1,36 @@
+{
+  "header": {
+    "lang": "RU",
+    "title": "TheMovieDB",
+    "home": "Home",
+    "my-films": "My films"
+  },
+  "homepage": {
+    "title": "Search your film",
+    "search-plh": "Search..."
+  },
+  "my-films": {
+    "title": "My films",
+    "watched": "Watched films",
+    "queue": "Films in queue"
+  },
+  "queue": {
+    "title": "Films in queue"
+  },
+  "watched": {
+    "title": "Watched films"
+  },
+  "movie-card": {
+    "more": "More",
+    "queue": "Add to queue",
+    "watched": "Add to watched",
+    "remove": "Remove",
+    "no-description": "The film has no description..."
+  },
+  "error-message": {
+    "message": "Error has occurred! Try to reload the page"
+  },
+  "no-data-message": {
+    "message": "There is no data here :("
+  }
+}

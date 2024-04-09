@@ -1,0 +1,128 @@
+:root {
+  --background-primary-light: #484F5F;
+  --background-primary-main: #2d2d2d;
+  --background-primary-dark: #353C4E;
+
+  --background-secondary-light: #313640;
+  --background-secondary-main: #484F5F;
+  --background-secondary-dark: #1D1E21;
+
+  /* status colors */
+  --success-light: #5C6D6C;
+  --success-main: #5BE2B2;
+  --success-dark: #409E7D;
+
+  --error-light: #685C66;
+  --error-main: #fc6565;
+  --error-dark: #f23c3c;
+
+  /* brand colors */
+  --primary-light: #80d1ac;
+  --primary-main: #80f470;
+  --primary-dark: #144439;
+
+  /* typography colors */
+  --text-primary-light: #FFFFFF;
+  --text-primary-main: #FFFFFF;
+  --text-primary-dark: #E1E1E1;
+
+  --text-secondary-light: #C8CCD8;
+  --text-secondary-main: #AAAFBE;
+  --text-secondary-dark: #6F7378;
+
+  --text-accent-light: #80d1ac;
+  --text-accent-main: #39e75f;
+  --text-accent-dark: #267966;
+
+  --text-sidebar-main: #FFFFFF;
+  --text-invert-main: #2E3646;
+
+  /* border colors */
+  --border-primary-light: #FFFFFF;
+  --border-primary-main: #FFFFFF;
+  --border-primary-dark: #E1E1E1;
+
+  /* disable colors */
+  --disable-primary-light: #9292A4;
+  --disable-primary-main: #7A7A81;
+  --disable-primary-dark: #6F7485;
+}
+
+:root,
+:before,
+:after {
+  /* App variables */
+  --app-font-family: 'Inter', 'Noto Sans', '-apple-system', 'BlinkMacSystemFont', sans-serif;
+  --app-padding-right: #{toRem(32)};
+  --app-padding-left: #{toRem(32)};
+
+  @include respond-to(small) {
+    --app-padding-right: #{toRem(24)};
+    --app-padding-left: #{toRem(24)};
+  }
+
+
+  /* --------------------------------------- */
+
+  /* Field variables */
+
+  /* --------------------------------------- */
+  --field-bg-primary: var(--background-primary-main);
+  --field-bg-disabled: var(--background-primary-dark);
+
+  /* label */
+  --field-label: var(--text-primary-dark);
+  --field-label-hover: var(--text-primary-main);
+  --field-label-focus: var(--text-primary-main);
+  --field-label-font-size: #{toRem(14)};
+  --field-label-line-height: 1.4;
+
+  /* text */
+  --field-text: var(--text-primary-main);
+  --field-text-font-size: #{toRem(14)};
+  --field-text-line-height: 1.42;
+  --field-text-disabled: var(--disable-primary-light);
+  --field-placeholder: var(--text-secondary-light);
+
+  /* border */
+  --field-border: var(--border-primary-main);
+  --field-border-hover: var(--border-primary-main);
+  --field-border-focus: var(--primary-main);
+  --field-border-disabled: var(--disable-primary-light);
+  --field-border-error: var(--error-main);
+
+  /* transition duration */
+  --field-transition-duration: 0.2s;
+
+  /* paddings */
+  --field-padding-top: #{toRem(12)};
+  --field-padding-right: #{toRem(16)};
+  --field-padding-bottom: #{toRem(12)};
+  --field-padding-left: #{toRem(16)};
+  --field-padding:
+    var(--field-padding-top)
+    var(--field-padding-right)
+    var(--field-padding-bottom)
+    var(--field-padding-left);
+
+  --field-error: var(--error-dark);
+
+  --card-shadow: rgba(16, 24, 40, 0.05);
+
+  /* modals */
+  --modal-background: rgba(0, 0, 0, 0.5);
+  --modal-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+
+  /* z-indexes */
+  --z-modal-backdrop: -1;
+  --z-default: 1;
+  --z-layer-1: 10;
+  --z-layer-2: 20;
+  --z-layer-3: 30;
+  --z-header: 99;
+  --z-sidebar: 100;
+  --z-modal: 100;
+
+  --z-status-message: 110;
+
+}
